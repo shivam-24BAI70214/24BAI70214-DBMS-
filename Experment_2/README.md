@@ -84,6 +84,7 @@ SELECT city, COUNT(*) AS count_students
 FROM Students
 GROUP BY city;
 ```
+![Students Table Creation](./Result_1.png)
 - Execute the query to view all inserted records
 - Verify the data appears correctly in the result set
 
