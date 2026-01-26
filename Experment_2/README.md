@@ -99,15 +99,15 @@ ORDER BY AVG(SALARY) DESC;
 
 ---
 
-##Input / Output Details
-Input
+## Input / Output Details
+# Input
 SQL commands for:
 - Table creation
 - Record insertion
 - Data retrieval
 - Aggregate functions (AVG)
 - Filtering using WHERE and HAVING
-Output
+# Output
 - EMPLOYEE table created successfully
 - Employee records inserted into the table
 - Department-wise average salary displayed
