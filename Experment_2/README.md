@@ -1,134 +1,116 @@
-# SQL Practical – Aggregate Functions and GROUP BY
+# SQL Practical – Employee Table and Aggregate Functions
 
-## Experiment 2
-To study and implement SQL aggregate functions using `GROUP BY`, `HAVING`, and `ORDER BY` clauses on a Students database table.
-
----
-
-## Software Requirements
-- MySQL Workbench
-- SQL Server
+## Experiment
+To create an EMPLOYEE table in MySQL Workbench, insert employee records, and perform aggregate queries using `GROUP BY`, `HAVING`, and `ORDER BY` clauses.
 
 ---
 
 ## Objective
-- To understand the use of SQL aggregate functions
-- To perform grouping of records using the `GROUP BY` clause
-- To filter grouped data using the `HAVING` clause
-- To sort aggregated results using the `ORDER BY` clause
-- To gain hands-on experience with MySQL Workbench
+- To create and manage a database table using SQL  
+- To insert records into the EMPLOYEE table  
+- To calculate average salary using aggregate functions  
+- To filter records using `WHERE` and `HAVING` clauses  
+- To analyze department-wise salary data  
+- To gain hands-on experience with MySQL Workbench  
 
 ---
 
 ## Practical / Experiment Steps
-1. Create a Students table with required attributes.
-2. Insert student records into the table.
-3. Count the number of students in each city.
-4. Sort cities based on the number of students.
-5. Identify cities having at least three students.
-6. Calculate the average marks of students city-wise.
-7. Execute all queries and verify the output.
+1. Drop the EMPLOYEE table if it already exists.  
+2. Create the EMPLOYEE table with required columns.  
+3. Insert employee records into the table.  
+4. Display all employee records.  
+5. Calculate average salary department-wise.  
+6. Retrieve employees having salary greater than 20000.  
+7. Display departments having average salary greater than 30000.  
+8. Sort departments by average salary in descending order.  
 
 ---
 
 ## Procedure of the Experiment
-1. Start the system and log in.
-2. Open **MySQL Workbench**.
-3. Create a new SQL script.
-4. Write the `CREATE TABLE` command.
-5. Insert records using `INSERT INTO` statements.
-6. Execute `SELECT` queries with aggregate functions.
-7. Apply `GROUP BY`, `HAVING`, and `ORDER BY` clauses.
-8. Observe and verify the output.
-9. Save the work and take screenshots.
+(i) Start the system and log in to the computer.  
+(ii) Open MySQL Workbench.  
+(iii) Create or select the required database.  
+(iv) Execute the SQL command to drop the EMPLOYEE table if it exists.  
+(v) Create the EMPLOYEE table with appropriate data types.  
+(vi) Insert employee records into the table.  
+(vii) Execute SELECT queries for data retrieval and analysis.  
+(viii) Verify the output after execution.  
+(ix) Save the work and capture screenshots for record.  
 
 ---
 
-## Input / Output Details and Screenshots
+## SQL Code Used
 
-## 4. Procedure of the Practical
-
-Follow these sequential steps to execute the experiment:
-
-### (i) Start the System and Open DBMS
-- Power on the computer and log in
-- Open the Database Management System (SQL Server / MySQL / Oracle)
-- Ensure you have access to create and modify tables
-
-### (ii) Create or Select the Required Database
-- Create a new database or select an existing one
-- Verify the database is active before proceeding
-
-### (iii) Create the Students Table
 ```sql
-DROP TABLE IF EXISTS Students;
-CREATE TABLE Students (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    city VARCHAR(30),
-    marks INT
+-- Drop table if it already exists
+DROP TABLE IF EXISTS EMPLOYEE;
+
+-- Create EMPLOYEE table
+CREATE TABLE EMPLOYEE (
+    EMP_ID INT PRIMARY KEY,
+    EMP_NAME VARCHAR(20),
+    DEPARTMENT VARCHAR(20),
+    SALARY DECIMAL(10,2),
+    JOINING_DATE DATE
 );
 
-```
-- Execute the command to create the table with proper data types
-- Verify table structure and constraints
+-- Display table records
+SELECT * FROM EMPLOYEE;
 
-### (iv) Insert Student Records
-```sql
-INSERT INTO Students VALUES (1, 'Shivam', 'Ludhiana', 85);
-INSERT INTO Students VALUES (2, 'Jaskaran', 'Ludhiana', 78);
-INSERT INTO Students VALUES (3, 'Yuvraj', 'Ludhiana', 92);
-INSERT INTO Students VALUES (4, 'Kartik', 'Chandigarh', 88);
-INSERT INTO Students VALUES (5, 'Anhad', 'Mohali', 75);
-```
-- Execute all INSERT statements sequentially
-- Verify each record is inserted successfully
+-- Insert records into EMPLOYEE table
+INSERT INTO EMPLOYEE VALUES (1, 'Jaskaran', 'IT', 30000, '2023-05-23');
+INSERT INTO EMPLOYEE VALUES (2, 'Sameer', 'IT', 27000, '2016-05-23');
+INSERT INTO EMPLOYEE VALUES (3, 'Kartik', 'HR', 19000, '2025-09-14');
+INSERT INTO EMPLOYEE VALUES (4, 'Yuvraj', 'Finance', 22000, '2021-11-06');
+INSERT INTO EMPLOYEE VALUES (5, 'Anhad', 'Finance', 55000, '2023-10-25');
 
-### (v) How many students belong to each city.
-```sql
-SELECT city, COUNT(*) AS count_students
-FROM Students
-GROUP BY city;
-```
-![](./screenshots/Result_1.png)
-- Execute the query to view all inserted records
-- Verify the data appears correctly in the result set
+-- Average salary department-wise
+SELECT 
+    DEPARTMENT, 
+    ROUND(AVG(SALARY), 2) AS AVG_SAL
+FROM EMPLOYEE
+GROUP BY DEPARTMENT;
 
-### (vi) Sort Cities Based on Student Count.
-```sql
-SELECT CITY, COUNT(*) AS NO_OF_STUDENT
-FROM Students
-GROUP BY City
-ORDER BY NO_OF_STUDENT ASC
-```
-![](./screenshots/Result_2.png)
-- Execute the query to count students by city
-- Observe how GROUP BY organizes data by city
-- Note the ORDER BY sorts results by count in ascending order
-- Results show each city with the number of students
+-- Employees with salary greater than 20000
+SELECT 
+    EMP_ID, 
+    EMP_NAME, 
+    SALARY
+FROM EMPLOYEE
+WHERE SALARY > 20000;
 
-### (vii) Find Cities Having at Least Three Students.
-```sql
-SELECT city, COUNT(*) AS count_students
-FROM Students
-GROUP BY city
-HAVING COUNT(*) >= 3;
-```
-![](./screenshots/Result_3.png)
-### (viii) Calculate the average marks of students in each city.
-```sql
-SELECT city, ROUND(AVG(marks), 2) AS average_marks
-FROM Students
-GROUP BY city;
-```
-![](./screenshots/Result_4.png)
+-- Departments with average salary greater than 30000
+SELECT 
+    DEPARTMENT, 
+    ROUND(AVG(SALARY), 2) AS AVG_SAL
+FROM EMPLOYEE
+GROUP BY DEPARTMENT
+HAVING AVG(SALARY) > 30000;
 
-## Learning Outcome
-After completing this experiment, the student is able to:
-- Use SQL aggregate functions such as COUNT and AVG
-- Apply GROUP BY and HAVING clauses effectively
-- Analyze data using SQL queries
-- Sort and filter grouped results
-- Gain practical exposure to MySQL Workbench
+-- Departments ordered by average salary (descending)
+SELECT 
+    DEPARTMENT, 
+    ROUND(AVG(SALARY), 2) AS AVG_SAL
+FROM EMPLOYEE
+GROUP BY DEPARTMENT
+ORDER BY AVG(SALARY) DESC;
+```
 
 ---
+
+##Input / Output Details
+Input
+SQL commands for:
+- Table creation
+- Record insertion
+- Data retrieval
+- Aggregate functions (AVG)
+- Filtering using WHERE and HAVING
+Output
+- EMPLOYEE table created successfully
+- Employee records inserted into the table
+- Department-wise average salary displayed
+- Employees with salary greater than 20000 retrieved
+- Departments with average salary greater than 30000 displayed
+- Departments sorted by average salary in descending order
