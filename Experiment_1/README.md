@@ -3,8 +3,6 @@
 ## AIM
 To design and implement a Library Management System database using SQL with appropriate tables, constraints, and relationships, and to perform DDL, DML, and DCL operations for secure database management.
 
----
-
 ## Software Requirements
 - MySQL Workbench
 - SQL Server
