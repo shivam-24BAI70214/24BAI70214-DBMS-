@@ -2,6 +2,11 @@
 
 ## Experiment
 To study and implement SQL aggregate functions using `GROUP BY`, `HAVING`, and `ORDER BY` clauses on a Students database table.
+---
+
+## Software Requirements
+- MySQL Workbench
+- SQL Server
 
 ---
 
@@ -126,7 +131,3 @@ After completing this experiment, the student is able to:
 - Gain practical exposure to MySQL Workbench
 
 ---
-
-## Tools Used
-- MySQL Workbench
-- GitHub
