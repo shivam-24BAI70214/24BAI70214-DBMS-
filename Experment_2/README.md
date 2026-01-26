@@ -1,6 +1,6 @@
 # SQL Practical – Aggregate Functions and GROUP BY
 
-## Experiment
+## Experiment 2
 To study and implement SQL aggregate functions using `GROUP BY`, `HAVING`, and `ORDER BY` clauses on a Students database table.
 
 ---
