@@ -6,7 +6,7 @@ To create an EMPLOYEE table in MySQL Workbench, insert employee records, and per
 --- 
 ## Software Requirements 
 - MySQL Workbench
-- - SQL Server
+- SQL Server
 
 ---
 
@@ -69,13 +69,18 @@ INSERT INTO EMPLOYEE VALUES (3, 'Kartik', 'HR', 19000, '2025-09-14');
 INSERT INTO EMPLOYEE VALUES (4, 'Yuvraj', 'Finance', 22000, '2021-11-06');
 INSERT INTO EMPLOYEE VALUES (5, 'Anhad', 'Finance', 55000, '2023-10-25');
 
+SELECT * FROM EMPLOYEE;
+```
+<img width="1056" height="323" alt="Exp_2(2)" src="https://github.com/user-attachments/assets/75b24f19-6dd9-40bf-9ca1-ba662de8fb81" />
+
+```sql
 SELECT 
     DEPARTMENT, 
     ROUND(AVG(SALARY), 2) AS AVG_SAL
 FROM EMPLOYEE
 GROUP BY DEPARTMENT;
 ```
-<img width="1056" height="323" alt="Exp_2(2)" src="https://github.com/user-attachments/assets/0c200f95-04ed-4e4d-8e0e-b5598631e4e2" />
+<img width="1061" height="326" alt="Exp_2(3)" src="https://github.com/user-attachments/assets/a4dab546-5f80-46b7-93d8-aceb2ca7b574" />
 
 ```sql
 SELECT 
@@ -85,7 +90,7 @@ SELECT
 FROM EMPLOYEE
 WHERE SALARY > 20000;
 ```
-<img width="1061" height="326" alt="Exp_2(3)" src="https://github.com/user-attachments/assets/3c021e7d-0984-4feb-81b4-9117884ed7d8" />
+<img width="1054" height="329" alt="Exp_2(4)" src="https://github.com/user-attachments/assets/50ca8000-5bb2-4d0d-aa13-ab40a5fb6e8d" />
 
 ```sql
 SELECT 
@@ -95,7 +100,7 @@ FROM EMPLOYEE
 GROUP BY DEPARTMENT
 HAVING AVG(SALARY) > 30000;
 ```
-<img width="1054" height="329" alt="Exp_2(4)" src="https://github.com/user-attachments/assets/def79a51-c7a2-42b2-af64-374a5f34e131" />
+<img width="1052" height="332" alt="Exp_2(5)" src="https://github.com/user-attachments/assets/2b6a5e13-8696-40f7-a0df-6029636e1a87" />
 
 ```sql
 SELECT 
@@ -105,7 +110,7 @@ FROM EMPLOYEE
 GROUP BY DEPARTMENT
 ORDER BY AVG(SALARY) DESC;
 ```
-<img width="1052" height="332" alt="Exp_2(5)" src="https://github.com/user-attachments/assets/f9a7e01f-a5dd-4846-8fe2-57df0026e96b" />
+<img width="1057" height="328" alt="Exp_2(6)" src="https://github.com/user-attachments/assets/b82719c9-8d34-4868-8a8e-457dd9637cc7" />
 
 ---
 
