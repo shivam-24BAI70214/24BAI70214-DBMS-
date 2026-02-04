@@ -1,50 +1,50 @@
 --- IF–ELSE Statement ---
 DECLARE
-    num INTEGER := 5;
+    num NUMBER := 5;
 BEGIN
     IF num > 0 THEN
-        RAISE NOTICE 'The number % is Positive', num;
+        DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is Positive');
     ELSE
-        RAISE NOTICE 'The number % is Non-Positive', num;
+        DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is Non-Positive');
     END IF;
 END;
 
 --- IF–ELSIF–ELSE Statement ---
 DECLARE
-    marks INTEGER := 82;
+    marks NUMBER := 82;
 BEGIN
     IF marks >= 90 THEN
-        RAISE NOTICE 'Grade: A';
+        DBMS_OUTPUT.PUT_LINE('Grade: A');
     ELSIF marks >= 75 THEN
-        RAISE NOTICE 'Grade: B';
+        DBMS_OUTPUT.PUT_LINE('Grade: B');
     ELSIF marks >= 60 THEN
-        RAISE NOTICE 'Grade: C';
+        DBMS_OUTPUT.PUT_LINE('Grade: C');
     ELSE
-        RAISE NOTICE 'Grade: Fail';
+        DBMS_OUTPUT.PUT_LINE('Grade: Fail');
     END IF;
 END;
 
 --- ELSIF Ladder ---
 DECLARE
-    marks INTEGER := 68;
+    marks NUMBER := 68;
 BEGIN
     IF marks >= 85 THEN
-        RAISE NOTICE 'Performance: Excellent';
+        DBMS_OUTPUT.PUT_LINE('Performance: Excellent');
     ELSIF marks >= 70 THEN
-        RAISE NOTICE 'Performance: Very Good';
+        DBMS_OUTPUT.PUT_LINE('Performance: Very Good');
     ELSIF marks >= 55 THEN
-        RAISE NOTICE 'Performance: Good';
+        DBMS_OUTPUT.PUT_LINE('Performance: Good');
     ELSIF marks >= 40 THEN
-        RAISE NOTICE 'Performance: Average';
+        DBMS_OUTPUT.PUT_LINE('Performance: Average');
     ELSE
-        RAISE NOTICE 'Performance: Poor';
+        DBMS_OUTPUT.PUT_LINE('Performance: Poor');
     END IF;
 END;
 
 --- CASE Statement ---
 DECLARE
-    day_no INTEGER := 3;
-    day_name TEXT;
+    day_no NUMBER := 3;
+    day_name VARCHAR2(20);
 BEGIN
     day_name := CASE day_no
         WHEN 1 THEN 'Sunday'
@@ -57,5 +57,5 @@ BEGIN
         ELSE 'Invalid Day Number'
     END;
 
-    RAISE NOTICE 'Day: %', day_name;
+    DBMS_OUTPUT.PUT_LINE('Day: ' || day_name);
 END;
