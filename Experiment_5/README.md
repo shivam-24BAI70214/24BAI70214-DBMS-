@@ -73,17 +73,27 @@ FROM employees;
 ---
 
 ## Output
+### Table Showing Salary Types of all Employees:
 <img width="747" height="702" alt="Salary_type_table" src="https://github.com/user-attachments/assets/68f43582-27f3-4708-8e5a-0a49ab9b4a59" />
+### Table Showing only Employees having Even Salaries:
 <img width="745" height="674" alt="Even_Salary_Table" src="https://github.com/user-attachments/assets/6efc0aeb-da68-4d0c-bc0d-57babe1a6ebc" />
 
 ---
 
 ## Input / Output Details
-# Input
+### Input
 - Employee ID
 - Employee Name
 - Salary
-# Output
+### Output
 - Employees with even salaries
 - Employees with odd salaries
 - Salary classification (Even Salary / Odd Salary)
+
+---
+
+## Learning Outcome
+- Understood how SQL conditional logic works.
+- Learned to use the MOD function for identifying odd and even numbers.
+- Practiced filtering and categorizing data using SQL queries.
+- Improved understanding of SQL query execution in Oracle SQL Developer.
