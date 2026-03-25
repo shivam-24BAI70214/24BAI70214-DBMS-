@@ -40,7 +40,7 @@ This experiment focuses on designing and implementing simple views, complex view
 ## 💻 SQL Implementation
 
 ```sql
--- Drop tables (ignore error if not exists)
+-- Drop tables
 DROP TABLE employees CASCADE CONSTRAINTS;
 DROP TABLE departments CASCADE CONSTRAINTS;
 
