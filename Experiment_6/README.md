@@ -169,8 +169,38 @@ BEGIN
 END;
 ```
 ## Output
-- Implicit Cursor Output
+### Implicit Cursor Output
 <img width="744" height="675" alt="Implicit_cursor" src="https://github.com/user-attachments/assets/6aabc72e-7a54-4edb-a2aa-1fd10d607a3c" />
 
-- Explicit Cursor Output
+### Explicit Cursor Output
 <img width="746" height="678" alt="Explicit_Cursor" src="https://github.com/user-attachments/assets/cbaf517d-cf17-4868-a101-f17e6568cf8d" />
+
+### Cursor Attributes Output
+<img width="744" height="679" alt="Cursor_Attributes" src="https://github.com/user-attachments/assets/99090cbe-0a70-459e-8afe-dac1cd974a60" />
+
+### Business Logic Execution Output
+<img width="742" height="672" alt="Business_Logic_Example" src="https://github.com/user-attachments/assets/e70ece57-a579-41ec-b6cb-dc20378b062c" />
+
+### Final Table Output
+<img width="740" height="672" alt="FinalTable_Output" src="https://github.com/user-attachments/assets/b8177def-d681-4dc3-84e7-ba2e412ba8af" />
+
+## Input / Output Details
+### Input
+- Employee ID
+- Employee Name
+- Salary
+- Department
+
+### Output
+- Updated salary using implicit cursor
+- Employee records processed row-by-row
+- Row-wise output using explicit cursor
+- Bonus applied based on business condition
+- Final Table Output
+
+## Learning Outcomes
+- Understood how cursors work in PL/SQL.
+- Learned the difference between implicit and explicit cursors.
+- Used cursor attributes to control execution flow.
+- Gained experience in row-by-row data processing.
+- Applied cursor-based logic similar to real-world enterprise systems.
