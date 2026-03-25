@@ -64,10 +64,10 @@ INSERT INTO departments VALUES (2, 'IT');
 INSERT INTO departments VALUES (3, 'Finance');
 INSERT INTO departments VALUES (4, 'Marketing');
 
-INSERT INTO employees VALUES (1, 'Amit', 1, 40000, DATE '2022-01-10');
-INSERT INTO employees VALUES (2, 'Ravi', 2, 60000, DATE '2021-03-15');
-INSERT INTO employees VALUES (3, 'Priya', 2, 75000, DATE '2020-07-20');
-INSERT INTO employees VALUES (4, 'Neha', 3, 50000, DATE '2022-05-11');
+INSERT INTO employees VALUES (1, 'Anhad', 1, 40000, DATE '2022-01-10');
+INSERT INTO employees VALUES (2, 'Rohit', 2, 60000, DATE '2021-03-15');
+INSERT INTO employees VALUES (3, 'Jaskaran', 2, 75000, DATE '2020-07-20');
+INSERT INTO employees VALUES (4, 'Yuvraj', 3, 50000, DATE '2022-05-11');
 
 COMMIT;
 
