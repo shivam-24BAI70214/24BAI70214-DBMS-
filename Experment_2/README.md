@@ -139,4 +139,4 @@ After completing this practical, the learner is able to:
 - Apply aggregate functions for data analysis
 - Use GROUP BY, HAVING, and ORDER BY clauses correctly
 - Analyze employee data department-wise
-- Gain practical exposure to SQL using MySQL Workbench
+- Gain practical exposure to SQL using MySQL Workbench.
