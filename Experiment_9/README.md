@@ -112,6 +112,7 @@ $$;
 ## 📊 Output
 ### ✅ Valid Insert
 <img width="653" height="609" alt="Exp-9_Output1" src="https://github.com/user-attachments/assets/c76cc39b-3440-4d2a-b0f1-513874c9538a" />
+
 ### ❌ Invalid Insert
 <img width="625" height="585" alt="Exp-9_Output2" src="https://github.com/user-attachments/assets/fda463ab-738b-4a86-837c-6ceddc5cd55c" />
 
